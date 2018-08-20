@@ -1,0 +1,342 @@
+@font-face {
+    font-family: 'zfb';
+    src: url('../fonts/font_1431504418_7238076.woff')) format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+.title_login {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    height: auto;
+}
+.title {
+    height: auto;
+    overflow: hidden;
+    background-color: black;
+}
+
+.ul_title_right, .ul_title_left {
+    margin: 0;
+    padding: 5px 0px;
+}
+
+.ul_title_left {
+    padding-left: 16%;
+}
+
+.ul_title_right {
+    padding-right: 16%;
+}
+
+.ul_title_left > li, .ul_title_right > li {
+    font-family: zfb;
+    float: left;
+    list-style: none;
+    padding: 3px 15px;
+    font-size: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.ul_title_left > li:hover, .ul_title_right > li:hover {
+    color: #00BBEE;
+}
+
+.ul_right_li:first-child {
+    border-right: 2px solid white;
+}
+
+.login {
+    height: auto;
+    overflow: hidden;
+    background-color: rgba(240, 241, 242, 0.87);
+    padding: 20px 17%;
+}
+
+.ul_login {
+    margin-left: 15%;
+}
+
+.ul_login > li {
+    margin-top: 10px;
+    list-style: none;
+    float: left;
+    padding: 0px 20px;
+    color: black;
+}
+
+.ul_login > li:first-child {
+    color: #00BBEE;
+}
+
+.ul_login > li:hover {
+    color: #00BBEE;
+}
+
+.img_login, .ul_login {
+    float: left;
+}
+.li_banner_div {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.13);
+}
+.banner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;         /*高度都是100%超出部分隐藏使其只能出现一张图片*/
+}
+.ul_banner {
+    width: 100%;
+    height: 100%;              /*高度都是100%超出部分隐藏使其只能出现一张图片*/
+}
+.li_banner {
+    position: relative;
+    width: 100%;              /*高度都是100%超出部分隐藏使其只能出现一张图片*/
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+}
+.img_li {
+    position: absolute;
+    width: 100%;     /*所有图片高度都是100%*/
+    height: 100%;
+}
+.div_li {
+    width: 30%;
+    height: 30%;
+    margin-top: 20%;
+}
+.btn_login {
+    background-color: #00BBEE !important;
+}
+.btn_login, .btn_regest {
+    width: 40%;
+    margin-top: 20px;
+    background-color: transparent;
+    border: 1px solid white;
+    outline: none;
+    border-radius: 5px;
+    line-height: 25px;
+    color: white;
+}
+.per {
+    position: absolute;                    /*其他图片或北京都绝对定位*/
+    width: 50%;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+}
+.div_banner {
+    position: absolute;
+    width: 100%;
+}
+.img_size {
+    position: absolute;
+    display: none;    /*先隐藏文字最后让其显示要注意层级比其他同级背景层级高*/
+    width: 20%;
+    margin-left: 30%;
+    margin-top: 15%;
+    z-index: 2;
+}
+.img_p {
+    margin-left: 40%;
+}
+.img_yun {
+    position: absolute;
+    margin-left: 30%;
+    transition: all 5s;             /*云的margin-left变化再30%到40%*/
+    z-index: 1;
+}
+.img_yun1 {
+    position: absolute;
+    margin-left: 60%;
+    z-index: 1;
+}
+.img_yun2 {
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 10%;
+    z-index: 1;
+}
+.li_banner_title {
+    position: absolute;
+    z-index: 6;
+    width: 100%;
+    bottom: 0;
+    color: white;
+    font-size: 10px;
+    background-color: rgba(0, 0, 0, 0.53);
+}
+.div_image {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
+.img_tu {
+    position: absolute;
+    z-index: 3;
+}
+.img_tu:nth-child(3) {       /*隐藏扫码和文字手机不用隐藏直接用js控制移动即可*/
+    display: none;
+    margin-left: 50%;
+    margin-top: 15%;
+}
+.img_tu:nth-child(1) {
+    width: 40%;
+    display: none;
+    z-index: 4 !important;
+}
+.img_tu:nth-child(2) {
+    margin-left: 60%;
+    margin-top: 25%;
+    transition: all 1s;      /*手机css3动画在前后两次属性值的变化中移动*/
+}
+.img_big {
+    transition: all 3s;   /*图片前后两次属性值transform scale的变化放大动画*/
+}
+.img_fan {
+    margin-left: 15%;
+    margin-top: 10%;
+    display: none;      /*文字刚开始隐藏*/
+}
+.img_sma {             /*文字刚开始隐藏*/
+    margin-left: 50%;
+    margin-top: 15%;
+    display: none;
+}
+.img_pai {
+    display: none;           /*文字刚开始隐藏*/
+    margin-left: 15%;
+    margin-top: 15%;
+}
+
+.li_banner:last-child {
+    background-color: #F5F5F5;
+}
+.div_foot {               /*脚注*/
+    width: 20%;
+    height: auto;
+    padding-bottom: 3%;
+    float: left;
+    border-bottom: 1px solid silver;
+}
+.div_foot p {
+    color: black;
+    font-size: 12px;
+}
+
+.div_foot a {
+    color: gray;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.div_foot a:hover {
+    color: #00BBEE;
+}
+
+.div_foot1 {
+    width: 20%;
+    height: auto;
+    padding-bottom: 3%;
+    float: left;
+}
+
+.div_foot1 p {
+    color: gray;
+    font-size: 11px;
+}
+
+.div_foot1 a {
+    color: gray;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+.div_foot1 a:hover {
+    color: #00BBEE;
+}
+
+.ul_foot {
+    margin-left: 16%;
+    margin-top: 5%;
+}
+
+.ul_foot li {
+    list-style: none;
+    float: left;
+    color: gray;
+    font-size: 10px;
+    padding: 0px 5px;
+    border-right: 1px solid silver;
+}
+
+.dian {
+    position: fixed;
+    right: 10px;
+    z-index: 101001;
+    padding-top: 20%;
+}
+
+.div_d {
+    border-radius: 100%;
+    margin-top: 10px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+
+}
+
+.video_p {
+    display: none;      /*将视频隐藏则现实的就是那张图片*/
+    width: 100%;
+}
+
+.a_video {
+    margin-top: 5%;
+    width: 30px;
+    border: 1px solid white;
+    border-radius: 100%;
+    text-align: center;
+    color: white;
+    line-height: 30px;
+    font-size: xx-large;
+    text-decoration:none;
+}
+/*
+@media screen and (max-width: 1268px) {
+    .div_bg {
+        width: 1200px;
+        margin: 0 auto;
+
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .div_bg {
+        width: 1000px;
+        margin: 0 auto;
+
+    }
+}
+
+@media screen and (max-width: 968px) {
+    .div_bg {
+        width: 960px;
+        margin: 0 auto;
+
+    }
+}*/

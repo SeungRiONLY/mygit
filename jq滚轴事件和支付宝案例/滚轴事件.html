@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="./js/jquery-3.0.0.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    //谷歌
+    /*document.onmousewheel=fn
+    function fn(e){
+        if(e.wheelDelta>0){
+            console.log("上")        //120
+        }
+        else{
+            console.log("下")        //-120
+        }
+    }*/
+    //火狐
+    //document.DOMMouseScroll=fn1   //或下面的写法
+   /* document.addEventListener("DOMMouseScroll",fn1)
+    function fn1(e){
+        if(e.detail<0){
+            console.log("上")
+        }
+        else{
+            console.log("下")
+        }
+    }*/
+    //考虑兼容性的代码
+    document.onmousewheel=fn;            //谷歌
+    if(document.addEventListener){          //火狐
+        document.addEventListener("DOMMouseScroll",fn)
+    }
+    function fn(e){
+        if(e.wheelDelta){
+            if(e.wheelDelta>0){
+               console.log("上")
+            }
+            else{
+                console.log("下")
+            }
+        }
+        else{
+            if(e.detail<0){
+                console.log("上")
+            }
+            else{
+                console.log("下")
+            }
+        }
+    }
+</script>
+</body>
+</html>
